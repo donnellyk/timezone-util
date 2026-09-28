@@ -81,6 +81,7 @@ private struct MenuFooter: View {
             .keyboardShortcut("q")
         }
         .buttonStyle(.borderless)
+        .focusEffectDisabled()
         .font(.system(size: 11))
     }
 }

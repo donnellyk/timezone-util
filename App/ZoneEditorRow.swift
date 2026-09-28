@@ -5,8 +5,39 @@ struct ZoneEditorRow: View {
     @Binding var zone: Zone
     let use24Hour: Bool
     let onDelete: () -> Void
+    let onDrop: (Zone.ID) -> Void
+
+    @State private var isDropTarget = false
 
     var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "line.3.horizontal")
+                .foregroundStyle(.tertiary)
+                .frame(width: 16, height: 32)
+                .contentShape(Rectangle())
+                .pointerStyle(.grabIdle)
+                .help("Drag to reorder")
+                .draggable(ZoneDrag(id: zone.id)) {
+                    Text(zone.displayName)
+                        .font(.body.weight(.semibold))
+                        .padding(8)
+                }
+            fields
+        }
+        .padding(.vertical, 2)
+        .background {
+            RoundedRectangle(cornerRadius: 6)
+                .fill(Color.accentColor.opacity(isDropTarget ? 0.15 : 0))
+                .padding(-4)
+        }
+        .dropDestination(for: ZoneDrag.self) { drags, _ in
+            drags.first.map { onDrop($0.id) } != nil
+        } isTargeted: {
+            isDropTarget = $0
+        }
+    }
+
+    private var fields: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 8) {
                 TextField("Name", text: $zone.name, prompt: Text(zone.cityName))
@@ -34,6 +65,5 @@ struct ZoneEditorRow: View {
             }
             .font(.callout)
         }
-        .padding(.vertical, 2)
     }
 }

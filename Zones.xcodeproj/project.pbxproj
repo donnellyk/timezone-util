@@ -15,6 +15,7 @@
 		31A15624FC4617BBBB2B86C8 /* SettingsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA067B504F20DF773F60B7F /* SettingsWindow.swift */; };
 		37A54541DD8B970E9A9DBC54 /* ZonesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41022DA9AE493D0C5C40E862 /* ZonesPanel.swift */; };
 		3EDCD4CF502B8C77F2BCBE40 /* ZonesKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68183FF16DE6AE58A7CA3BF8 /* ZonesKit */; };
+		5E2D89FABF9FFE603108159D /* ZoneDrag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF257B6D7FB83AA2310257 /* ZoneDrag.swift */; };
 		61842BF88B8299CF47961D59 /* ZoneSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD676D409EBCAD6FF916B89 /* ZoneSearch.swift */; };
 		62F8AC25303B9DA60D108EBF /* LaunchAtLoginToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA8CE32582D5EB626B8E06 /* LaunchAtLoginToggle.swift */; };
 		6C55CC0770A047D1E8589C52 /* ZoneEditorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BAAF23FE9735724ED444A /* ZoneEditorRow.swift */; };
@@ -36,6 +37,7 @@
 		41022DA9AE493D0C5C40E862 /* ZonesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesPanel.swift; sourceTree = "<group>"; };
 		658A13766D3F52E673CE872F /* ZonesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesApp.swift; sourceTree = "<group>"; };
 		69B9140149422669526E0B32 /* Zones.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zones.entitlements; sourceTree = "<group>"; };
+		8FAF257B6D7FB83AA2310257 /* ZoneDrag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneDrag.swift; sourceTree = "<group>"; };
 		94A7DA52EF571931CE3C2F1E /* timezone-util */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "timezone-util"; path = .; sourceTree = SOURCE_ROOT; };
 		990E2FD713660C3B730BF6A0 /* Zones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A682B277687054CDC70544BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				B167D7D19B85EA3C062755AF /* Theme.swift */,
 				AA210E5435DD3DC96609D35A /* TimelineTrack.swift */,
 				BD7595337D5A0B2AC458D328 /* TimeOfDayPicker.swift */,
+				8FAF257B6D7FB83AA2310257 /* ZoneDrag.swift */,
 				EC5BAAF23FE9735724ED444A /* ZoneEditorRow.swift */,
 				13076A7C31A14E561A150273 /* ZoneRow.swift */,
 				69B9140149422669526E0B32 /* Zones.entitlements */,
@@ -193,6 +196,7 @@
 				0CDC52E61DAFFE508FFD98B5 /* Theme.swift in Sources */,
 				E30D596BD369F2B37FE8F377 /* TimeOfDayPicker.swift in Sources */,
 				E57B550C7A6BD43C4C39F3A2 /* TimelineTrack.swift in Sources */,
+				5E2D89FABF9FFE603108159D /* ZoneDrag.swift in Sources */,
 				6C55CC0770A047D1E8589C52 /* ZoneEditorRow.swift in Sources */,
 				0AA66F084A108324C727680E /* ZoneRow.swift in Sources */,
 				61842BF88B8299CF47961D59 /* ZoneSearch.swift in Sources */,
@@ -410,7 +414,7 @@
 			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

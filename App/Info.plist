@@ -24,5 +24,18 @@
 	<string>26.0</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Zones time zone</string>
+			<key>UTTypeIdentifier</key>
+			<string>me.kvnd.Zones.zone</string>
+		</dict>
+	</array>
 </dict>
 </plist>

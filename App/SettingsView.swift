@@ -9,16 +9,18 @@ struct SettingsView: View {
         Form {
             Section {
                 ForEach($settings.zones) { $zone in
-                    ZoneEditorRow(zone: $zone, use24Hour: settings.use24Hour) {
-                        settings.remove(zone.id)
-                    }
+                    ZoneEditorRow(
+                        zone: $zone, use24Hour: settings.use24Hour,
+                        onDelete: { settings.remove(zone.id) },
+                        onDrop: { dragged in
+                            withAnimation { settings.move(dragged, to: zone.id) }
+                        })
                 }
-                .onMove { settings.zones.move(fromOffsets: $0, toOffset: $1) }
                 ZoneSearch(use24Hour: settings.use24Hour, onAdd: settings.add)
             } header: {
                 Text("Time Zones")
             } footer: {
-                Text("Drag to reorder. The name is what the menu shows.")
+                Text("Drag a row by its handle to reorder. The name is what the menu shows.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }

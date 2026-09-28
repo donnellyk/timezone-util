@@ -3,7 +3,9 @@ import SwiftUI
 
 /// A titled floating window that hosts SwiftUI content and follows an `isPresented`
 /// binding. A menu-bar app has no main window, so the menu-bar label owns this one;
-/// floating keeps it reachable without a Dock icon.
+/// floating keeps it reachable without a Dock icon. Nonactivating, because the
+/// system may refuse to activate the app when it opens: the panel still becomes key
+/// and receives typing, which the shortcut recorder needs.
 final class SettingsWindow<Content: View>: NSPanel, NSWindowDelegate {
     private let isPresented: Binding<Bool>
 
@@ -11,7 +13,8 @@ final class SettingsWindow<Content: View>: NSPanel, NSWindowDelegate {
         self.isPresented = isPresented
         super.init(
             contentRect: NSRect(origin: .zero, size: size),
-            styleMask: [.titled, .closable, .resizable], backing: .buffered, defer: false)
+            styleMask: [.titled, .closable, .resizable, .nonactivatingPanel], backing: .buffered,
+            defer: false)
         title = "Zones Settings"
         isFloatingPanel = true
         level = .floating

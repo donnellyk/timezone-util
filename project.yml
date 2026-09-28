@@ -19,7 +19,7 @@ packages:
     path: .
   KeyboardShortcuts:
     url: https://github.com/sindresorhus/KeyboardShortcuts
-    from: 2.0.0
+    from: 3.1.0
 
 targets:
   Zones:
@@ -50,3 +50,7 @@ targets:
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         LSUIElement: true
         LSMinimumSystemVersion: "26.0"
+        UTExportedTypeDeclarations:
+          - UTTypeIdentifier: me.kvnd.Zones.zone
+            UTTypeDescription: Zones time zone
+            UTTypeConformsTo: [public.data]

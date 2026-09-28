@@ -21,6 +21,10 @@ final class SettingsStore {
         zones.append(Zone(name: candidate.city, timeZoneID: candidate.identifier))
     }
 
+    func move(_ id: Zone.ID, to target: Zone.ID) {
+        zones = zones.moving(id, to: target)
+    }
+
     func remove(_ id: Zone.ID) {
         zones.removeAll { $0.id == id }
     }
