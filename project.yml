@@ -1,0 +1,52 @@
+name: Zones
+options:
+  bundleIdPrefix: me.kvnd
+  deploymentTarget:
+    macOS: "26.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_STYLE: Automatic
+    DEAD_CODE_STRIPPING: YES
+    DEVELOPMENT_TEAM: "7VHDXN8BEL"
+
+packages:
+  ZonesKit:
+    path: .
+  KeyboardShortcuts:
+    url: https://github.com/sindresorhus/KeyboardShortcuts
+    from: 2.0.0
+
+targets:
+  Zones:
+    type: application
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources:
+      - App
+    dependencies:
+      - package: ZonesKit
+        product: ZonesKit
+      - package: KeyboardShortcuts
+        product: KeyboardShortcuts
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: me.kvnd.Zones
+        PRODUCT_NAME: Zones
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_ENTITLEMENTS: App/Zones.entitlements
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Zones
+        # Drive the version from the build settings above so project.yml is the
+        # single source of truth (XcodeGen otherwise defaults these to 1.0 / 1).
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        LSUIElement: true
+        LSMinimumSystemVersion: "26.0"

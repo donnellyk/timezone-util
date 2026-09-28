@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0216BB9B7109D664A6E05FBF /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = A80DBC6BD1578BC40A377E3B /* KeyboardShortcuts */; };
+		0491D75219A799EC0579EC22 /* MenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5796E61B6C21794031D72B /* MenuContent.swift */; };
+		0AA66F084A108324C727680E /* ZoneRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13076A7C31A14E561A150273 /* ZoneRow.swift */; };
+		0CDC52E61DAFFE508FFD98B5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B167D7D19B85EA3C062755AF /* Theme.swift */; };
+		19821D1C008C166AB0B1A106 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682B277687054CDC70544BF /* SettingsView.swift */; };
+		31A15624FC4617BBBB2B86C8 /* SettingsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA067B504F20DF773F60B7F /* SettingsWindow.swift */; };
+		37A54541DD8B970E9A9DBC54 /* ZonesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41022DA9AE493D0C5C40E862 /* ZonesPanel.swift */; };
+		3EDCD4CF502B8C77F2BCBE40 /* ZonesKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68183FF16DE6AE58A7CA3BF8 /* ZonesKit */; };
+		61842BF88B8299CF47961D59 /* ZoneSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD676D409EBCAD6FF916B89 /* ZoneSearch.swift */; };
+		62F8AC25303B9DA60D108EBF /* LaunchAtLoginToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBA8CE32582D5EB626B8E06 /* LaunchAtLoginToggle.swift */; };
+		6C55CC0770A047D1E8589C52 /* ZoneEditorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BAAF23FE9735724ED444A /* ZoneEditorRow.swift */; };
+		6FF38B6241548218F263480D /* ZonesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658A13766D3F52E673CE872F /* ZonesApp.swift */; };
+		9279B3F474F62126BB7C42C4 /* ZoneTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF82A7B836290CC0CCAA6A2 /* ZoneTimeline.swift */; };
+		9B08D4509F8ED17DEEA47071 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8061556D18FEDF35F87CE6 /* SettingsStore.swift */; };
+		D6758160C0BE9DB17799F401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BD5F7F6560C2D275F56CEF /* AppDelegate.swift */; };
+		D7740831002D2A0A2E903C82 /* Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BDE972D5839FB80293F0C9 /* Shortcuts.swift */; };
+		D8DF63525F0D66E5A87CA08C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3023B2994C4DDD8F9A3CD2FE /* AppState.swift */; };
+		E30D596BD369F2B37FE8F377 /* TimeOfDayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7595337D5A0B2AC458D328 /* TimeOfDayPicker.swift */; };
+		E57B550C7A6BD43C4C39F3A2 /* TimelineTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA210E5435DD3DC96609D35A /* TimelineTrack.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13076A7C31A14E561A150273 /* ZoneRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneRow.swift; sourceTree = "<group>"; };
+		1E8061556D18FEDF35F87CE6 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		2DF82A7B836290CC0CCAA6A2 /* ZoneTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneTimeline.swift; sourceTree = "<group>"; };
+		3023B2994C4DDD8F9A3CD2FE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		41022DA9AE493D0C5C40E862 /* ZonesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesPanel.swift; sourceTree = "<group>"; };
+		658A13766D3F52E673CE872F /* ZonesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesApp.swift; sourceTree = "<group>"; };
+		69B9140149422669526E0B32 /* Zones.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Zones.entitlements; sourceTree = "<group>"; };
+		94A7DA52EF571931CE3C2F1E /* timezone-util */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "timezone-util"; path = .; sourceTree = SOURCE_ROOT; };
+		990E2FD713660C3B730BF6A0 /* Zones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A682B277687054CDC70544BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A6BD5F7F6560C2D275F56CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA210E5435DD3DC96609D35A /* TimelineTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTrack.swift; sourceTree = "<group>"; };
+		B0BDE972D5839FB80293F0C9 /* Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcuts.swift; sourceTree = "<group>"; };
+		B167D7D19B85EA3C062755AF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BD7595337D5A0B2AC458D328 /* TimeOfDayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDayPicker.swift; sourceTree = "<group>"; };
+		DBA067B504F20DF773F60B7F /* SettingsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindow.swift; sourceTree = "<group>"; };
+		DEBA8CE32582D5EB626B8E06 /* LaunchAtLoginToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginToggle.swift; sourceTree = "<group>"; };
+		DF5796E61B6C21794031D72B /* MenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContent.swift; sourceTree = "<group>"; };
+		EC5BAAF23FE9735724ED444A /* ZoneEditorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneEditorRow.swift; sourceTree = "<group>"; };
+		FCD676D409EBCAD6FF916B89 /* ZoneSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneSearch.swift; sourceTree = "<group>"; };
+		FE49EA985DA19B0515D7E4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C952A0B4751E07B7E59002BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EDCD4CF502B8C77F2BCBE40 /* ZonesKit in Frameworks */,
+				0216BB9B7109D664A6E05FBF /* KeyboardShortcuts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B61AD995CCE2D97C0F5462F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				990E2FD713660C3B730BF6A0 /* Zones.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7511FCCE03552425866DF8AE = {
+			isa = PBXGroup;
+			children = (
+				F52E5A11879474D970348465 /* App */,
+				C0F08BC1A2F0FA42E4EB6143 /* Packages */,
+				1B61AD995CCE2D97C0F5462F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0F08BC1A2F0FA42E4EB6143 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				94A7DA52EF571931CE3C2F1E /* timezone-util */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		F52E5A11879474D970348465 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A6BD5F7F6560C2D275F56CEF /* AppDelegate.swift */,
+				3023B2994C4DDD8F9A3CD2FE /* AppState.swift */,
+				FE49EA985DA19B0515D7E4E3 /* Info.plist */,
+				DEBA8CE32582D5EB626B8E06 /* LaunchAtLoginToggle.swift */,
+				DF5796E61B6C21794031D72B /* MenuContent.swift */,
+				1E8061556D18FEDF35F87CE6 /* SettingsStore.swift */,
+				A682B277687054CDC70544BF /* SettingsView.swift */,
+				DBA067B504F20DF773F60B7F /* SettingsWindow.swift */,
+				B0BDE972D5839FB80293F0C9 /* Shortcuts.swift */,
+				B167D7D19B85EA3C062755AF /* Theme.swift */,
+				AA210E5435DD3DC96609D35A /* TimelineTrack.swift */,
+				BD7595337D5A0B2AC458D328 /* TimeOfDayPicker.swift */,
+				EC5BAAF23FE9735724ED444A /* ZoneEditorRow.swift */,
+				13076A7C31A14E561A150273 /* ZoneRow.swift */,
+				69B9140149422669526E0B32 /* Zones.entitlements */,
+				658A13766D3F52E673CE872F /* ZonesApp.swift */,
+				FCD676D409EBCAD6FF916B89 /* ZoneSearch.swift */,
+				41022DA9AE493D0C5C40E862 /* ZonesPanel.swift */,
+				2DF82A7B836290CC0CCAA6A2 /* ZoneTimeline.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB097F3FD8FD34EFB2BEDC57 /* Zones */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0CBFC5E12AB16C153E62D38 /* Build configuration list for PBXNativeTarget "Zones" */;
+			buildPhases = (
+				557682636108D7211E40BD83 /* Sources */,
+				C952A0B4751E07B7E59002BB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zones;
+			packageProductDependencies = (
+				68183FF16DE6AE58A7CA3BF8 /* ZonesKit */,
+				A80DBC6BD1578BC40A377E3B /* KeyboardShortcuts */,
+			);
+			productName = Zones;
+			productReference = 990E2FD713660C3B730BF6A0 /* Zones.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D34BEBEEFC80952C4A376A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FB097F3FD8FD34EFB2BEDC57 = {
+						DevelopmentTeam = 7VHDXN8BEL;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 979AF59774F82147CF083D70 /* Build configuration list for PBXProject "Zones" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7511FCCE03552425866DF8AE;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				11552280B315E3A9E4F97D0A /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				BA83A06357BA86C56B72B778 /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1B61AD995CCE2D97C0F5462F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB097F3FD8FD34EFB2BEDC57 /* Zones */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		557682636108D7211E40BD83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6758160C0BE9DB17799F401 /* AppDelegate.swift in Sources */,
+				D8DF63525F0D66E5A87CA08C /* AppState.swift in Sources */,
+				62F8AC25303B9DA60D108EBF /* LaunchAtLoginToggle.swift in Sources */,
+				0491D75219A799EC0579EC22 /* MenuContent.swift in Sources */,
+				9B08D4509F8ED17DEEA47071 /* SettingsStore.swift in Sources */,
+				19821D1C008C166AB0B1A106 /* SettingsView.swift in Sources */,
+				31A15624FC4617BBBB2B86C8 /* SettingsWindow.swift in Sources */,
+				D7740831002D2A0A2E903C82 /* Shortcuts.swift in Sources */,
+				0CDC52E61DAFFE508FFD98B5 /* Theme.swift in Sources */,
+				E30D596BD369F2B37FE8F377 /* TimeOfDayPicker.swift in Sources */,
+				E57B550C7A6BD43C4C39F3A2 /* TimelineTrack.swift in Sources */,
+				6C55CC0770A047D1E8589C52 /* ZoneEditorRow.swift in Sources */,
+				0AA66F084A108324C727680E /* ZoneRow.swift in Sources */,
+				61842BF88B8299CF47961D59 /* ZoneSearch.swift in Sources */,
+				9279B3F474F62126BB7C42C4 /* ZoneTimeline.swift in Sources */,
+				6FF38B6241548218F263480D /* ZonesApp.swift in Sources */,
+				37A54541DD8B970E9A9DBC54 /* ZonesPanel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		57E0961E3CCE4FFDB4568487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7VHDXN8BEL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		67459B5044BA719A8B1B664C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/Zones.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.kvnd.Zones;
+				PRODUCT_NAME = Zones;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D0B8C389CD0CF43F972EC63F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/Zones.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.kvnd.Zones;
+				PRODUCT_NAME = Zones;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D39D6FAC1809576529856986 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7VHDXN8BEL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		979AF59774F82147CF083D70 /* Build configuration list for PBXProject "Zones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39D6FAC1809576529856986 /* Debug */,
+				57E0961E3CCE4FFDB4568487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A0CBFC5E12AB16C153E62D38 /* Build configuration list for PBXNativeTarget "Zones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67459B5044BA719A8B1B664C /* Debug */,
+				D0B8C389CD0CF43F972EC63F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		BA83A06357BA86C56B72B778 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11552280B315E3A9E4F97D0A /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68183FF16DE6AE58A7CA3BF8 /* ZonesKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ZonesKit;
+		};
+		A80DBC6BD1578BC40A377E3B /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11552280B315E3A9E4F97D0A /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5D34BEBEEFC80952C4A376A2 /* Project object */;
+}
