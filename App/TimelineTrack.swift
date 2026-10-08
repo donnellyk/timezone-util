@@ -1,13 +1,14 @@
 import SwiftUI
 import ZonesKit
 
-/// One zone's day as a bar: the workday with its elapsed part filled in and a tick at
-/// the current time, over the zone's local hours.
+/// One zone's day as a bar: the workday with its elapsed part filled in, a tick at
+/// the current time, and a thinner line at the hovered time, over the zone's local hours.
 struct TimelineTrack: View {
     let work: [ClosedRange<Double>]
     let elapsed: [ClosedRange<Double>]
     let ticks: [TimelineTick]
     let now: Double
+    let cursor: Double?
     let use24Hour: Bool
 
     @Environment(\.colorScheme) private var colorScheme
@@ -33,12 +34,25 @@ struct TimelineTrack: View {
                 .fill(.primary.opacity(0.08))
             bands(work, width: width, fill: Theme.work.opacity(0.3))
             bands(elapsed, width: width, fill: Theme.work)
-            RoundedRectangle(cornerRadius: 1)
+            marker(at: now, width: width, lineWidth: 2)
                 .fill(colorScheme == .dark ? Color.white : Color.black)
-                .frame(width: 2, height: barHeight + 4)
-                .offset(x: min(max(width * now - 1, 0), width - 2))
+            if let cursor {
+                marker(at: cursor, width: width, lineWidth: 1)
+                    .fill(.primary.opacity(0.6))
+            }
         }
         .frame(width: width, height: barHeight)
+    }
+
+    private func marker(
+        at fraction: Double, width: CGFloat, lineWidth: CGFloat
+    )
+        -> some Shape
+    {
+        RoundedRectangle(cornerRadius: lineWidth / 2)
+            .size(width: lineWidth, height: barHeight + 4)
+            .offset(
+                x: min(max(width * fraction - lineWidth / 2, 0), width - lineWidth), y: -2)
     }
 
     private func labels(width: CGFloat) -> some View {

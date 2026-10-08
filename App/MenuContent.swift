@@ -5,17 +5,22 @@ import ZonesKit
 struct MenuContent: View {
     let state: AppState
 
+    @State private var hovered: Date?
+
     private var settings: SettingsStore { state.settings }
 
     var body: some View {
         TimelineView(.everyMinute) { context in
             VStack(alignment: .leading, spacing: 14) {
-                MenuHeader(now: context.date, use24Hour: settings.use24Hour)
+                MenuHeader(
+                    shown: hovered ?? context.date, isHovering: hovered != nil,
+                    use24Hour: settings.use24Hour)
                 if settings.zones.isEmpty {
                     EmptyZones(openSettings: openSettings)
                 } else {
                     ZoneTimeline(
-                        zones: settings.zones, use24Hour: settings.use24Hour, now: context.date)
+                        zones: settings.zones, use24Hour: settings.use24Hour, now: context.date,
+                        hovered: $hovered)
                 }
                 Divider()
                 MenuFooter(openSettings: openSettings)
@@ -31,20 +36,21 @@ struct MenuContent: View {
 }
 
 private struct MenuHeader: View {
-    let now: Date
+    let shown: Date
+    let isHovering: Bool
     let use24Hour: Bool
 
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
-            Text(now.formatted(.dateTime.weekday(.wide).month(.abbreviated).day()))
+            Text(shown.formatted(.dateTime.weekday(.wide).month(.abbreviated).day()))
                 .font(.system(size: 13, weight: .semibold))
             Spacer()
             Text(
-                "\(ClockText.time(now, in: .current, use24Hour: use24Hour)) \(TimeZone.current.abbreviation(for: now) ?? "")"
+                "\(ClockText.time(shown, in: .current, use24Hour: use24Hour)) \(TimeZone.current.abbreviation(for: shown) ?? "")"
             )
             .font(.system(size: 11))
             .monospacedDigit()
-            .foregroundStyle(.secondary)
+            .foregroundStyle(isHovering ? AnyShapeStyle(Theme.work) : AnyShapeStyle(.secondary))
         }
     }
 }

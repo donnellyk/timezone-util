@@ -29,6 +29,28 @@ import ZonesKit
         #expect(chicagoDay.fraction(of: chicagoDay.span.end.addingTimeInterval(60)) == 1)
     }
 
+    @Test func dateAtAFractionSnapsToTheStep() {
+        #expect(
+            chicagoDay.date(at: 14.1 / 24, roundedTo: 900)
+                == date(2026, 9, 28, 14, 0, in: "America/Chicago"))
+        #expect(
+            chicagoDay.date(at: 14.2 / 24, roundedTo: 900)
+                == date(2026, 9, 28, 14, 15, in: "America/Chicago"))
+    }
+
+    @Test func dateAtAFractionClampsToTheAxis() {
+        #expect(chicagoDay.date(at: -0.5, roundedTo: 900) == chicagoDay.span.start)
+        #expect(chicagoDay.date(at: 1.5, roundedTo: 900) == chicagoDay.span.end)
+    }
+
+    @Test func dateAtAFractionOnADSTDay() {
+        let fallBack = TimelineAxis.day(
+            containing: date(2026, 11, 1, 12, in: "America/Chicago"), in: zone("America/Chicago"))
+        #expect(
+            fallBack.date(at: 13.0 / 25, roundedTo: 900)
+                == date(2026, 11, 1, 12, in: "America/Chicago"))
+    }
+
     @Test func ticksInTheAxisZone() {
         let ticks = chicagoDay.ticks(everyHours: 6, in: zone("America/Chicago"))
         #expect(ticks.map(\.hour) == [0, 6, 12, 18])

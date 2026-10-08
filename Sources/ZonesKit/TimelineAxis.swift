@@ -23,6 +23,14 @@ public struct TimelineAxis: Equatable, Sendable {
         min(max(date.timeIntervalSince(span.start) / span.duration, 0), 1)
     }
 
+    /// The moment at `fraction` along the axis, rounded to the nearest `step` seconds
+    /// from its start and clamped to it. A 15-minute step keeps every zone on a
+    /// quarter hour, since all offsets are multiples of 15 minutes.
+    public func date(at fraction: Double, roundedTo step: TimeInterval) -> Date {
+        let offset = (min(max(fraction, 0), 1) * span.duration / step).rounded() * step
+        return span.start.addingTimeInterval(min(offset, span.duration))
+    }
+
     /// `intervals` clipped to the axis, as fraction ranges. Intervals outside it drop out.
     public func segments(for intervals: [DateInterval]) -> [ClosedRange<Double>] {
         intervals
