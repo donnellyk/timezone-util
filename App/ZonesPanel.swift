@@ -2,16 +2,18 @@ import AppKit
 import SwiftUI
 
 /// A chromeless floating panel under the menu-bar icon, for showing the menu's content
-/// from the global shortcut. SwiftUI cannot open a `MenuBarExtra` window from code.
-/// Esc or a click elsewhere dismisses it through the `isPresented` binding.
+/// on glass from the global shortcut. SwiftUI cannot open a `MenuBarExtra` window from
+/// code. Esc or a click elsewhere dismisses it through the `isPresented` binding.
 final class ZonesPanel<Content: View>: NSPanel, NSWindowDelegate {
+    private static var cornerRadius: CGFloat { 16 }
+
     private let isPresented: Binding<Bool>
     private var previousApp: NSRunningApplication?
 
     init(isPresented: Binding<Bool>, @ViewBuilder content: () -> Content) {
         self.isPresented = isPresented
         super.init(
-            contentRect: .zero, styleMask: [.nonactivatingPanel, .titled, .fullSizeContentView],
+            contentRect: .zero, styleMask: [.nonactivatingPanel, .borderless],
             backing: .buffered, defer: false)
         isFloatingPanel = true
         level = .floating
@@ -19,16 +21,22 @@ final class ZonesPanel<Content: View>: NSPanel, NSWindowDelegate {
         animationBehavior = .utilityWindow
         isReleasedWhenClosed = false
         hidesOnDeactivate = false
-        titleVisibility = .hidden
-        titlebarAppearsTransparent = true
-        // Transparent window so the SwiftUI glass provides the shape.
+        // Borderless and transparent, so the glass alone gives the shape. A titled
+        // window draws its own frame around the glass.
         backgroundColor = .clear
         isOpaque = false
         hasShadow = true
-        [.closeButton, .miniaturizeButton, .zoomButton].forEach {
-            standardWindowButton($0)?.isHidden = true
-        }
-        contentView = NSHostingView(rootView: content().ignoresSafeArea())
+        let hostingView = NSHostingView(
+            rootView: content()
+                .glassEffect(.regular, in: .rect(cornerRadius: Self.cornerRadius))
+                .ignoresSafeArea())
+        // The glass draws a faint backdrop over the whole view, and the shadow traces
+        // whatever is drawn, so clip to the glass's corners.
+        hostingView.wantsLayer = true
+        hostingView.layer?.cornerRadius = Self.cornerRadius
+        hostingView.layer?.cornerCurve = .continuous
+        hostingView.layer?.masksToBounds = true
+        contentView = hostingView
         delegate = self
     }
 
@@ -40,6 +48,7 @@ final class ZonesPanel<Content: View>: NSPanel, NSWindowDelegate {
         NSApp.activate()
         makeKeyAndOrderFront(nil)
         orderFrontRegardless()
+        invalidateShadow()
     }
 
     func dismiss() {

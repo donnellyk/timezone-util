@@ -13,7 +13,6 @@ struct ZonesApp: App {
             Image(systemName: "globe.americas.fill")
                 .zonesPanel(isPresented: $state.panelPresented) {
                     MenuContent(state: state)
-                        .glassEffect(.regular, in: .rect(cornerRadius: 16))
                 }
                 .settingsWindow(
                     isPresented: $state.settingsPresented, size: CGSize(width: 500, height: 560)
